@@ -20,17 +20,18 @@ public class ReverseArray {
             i++;
         }
         System.out.print("Elements in array: ");
-        for (int j = 0; j < array.length; j++) {
-            System.out.print(array[j] + " ");
-        }
+        arr(array);
         for (int j = 0; j < array.length / 2; j++) {
             int temp = array[j];
             array[j] = array[size - 1 - j];
             array[size - 1 - j] = temp;
         }
-        System.out.println("Reverse array: ");
-        for (int j = 0; j < array.length; j++) {
-            System.out.print(array[j] + " ");
+        System.out.print("Reverse array: ");
+        arr(array);
+    }
+    public static void arr(int[] array){
+        for (int i = 0; i< array.length; i++) {
+            System.out.print(array[i]+" ");
         }
     }
 }
