@@ -15,16 +15,15 @@ public class ConcatenatingArray {
         int size3 = size1 + size2;
         int[] array3 = new int[size3];
         displayArr(array3);
-        for (int i =0; i<array1.length;i++) {
+        for (int i = 0; i < array1.length; i++) {
             array3[i] = array1[i];
         }
         displayArr(array3);
-        for (int i =0; i<array2.length;i++) {
-            array3[array3.length-1-i] = array2[i];
+        for (int i = array1.length; i<array3.length;i++){
+            array3[i] = array2[i - array1.length];
         }
         displayArr(array3);
     }
-
     public static int[] createArray(int n) {
         int[] arr = new int[n];
         for (int i = 0; i < arr.length; i++) {
