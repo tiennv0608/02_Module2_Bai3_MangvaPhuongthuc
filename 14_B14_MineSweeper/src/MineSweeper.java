@@ -2,7 +2,11 @@ public class MineSweeper {
     public static void main(String[] args) {
         String[][] map = {
                 {"*", ".", "*", ".", "."},
-                {".", "*", ".", ".", "."}
+                {".", "*", ".", ".", "."},
+                {".", ".", ".", "*", "."},
+                {".", ".", ".", ".", "."},
+                {".", "*", "*", "*", "."},
+                {".", ".", ".", "*", "."},
         };
         final int MAP_HEIGHT = map.length;
         final int MAP_WIDTH = map[0].length;
