@@ -54,10 +54,14 @@ public class Menu {
                 case 7:
                     System.out.println("Nhập giá trị muốn xóa:");
                     number = sc.nextInt();
-                    int[] newArr = deleteElement(arr, size, number);
-                    size = newArr.length;
-                    arr = newArr;
-                    displayArray(arr, size);
+                    if (findValue(arr,size,number) != -1) {
+                        int[] newArr = deleteElement(arr, size, number);
+                        size = newArr.length;
+                        arr = newArr;
+                        displayArray(arr, size);
+                    } else {
+                        System.out.println("Giá trị muốn xóa không ở trong mảng");
+                    }
                     break;
                 case 8:
                     int[] reverseArray = reverseArr(arr, size);
