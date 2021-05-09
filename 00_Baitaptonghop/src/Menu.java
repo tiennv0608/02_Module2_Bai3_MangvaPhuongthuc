@@ -48,7 +48,8 @@ public class Menu {
                         }
                     } while (index < 1 || index >= size);
                     arr = addElement(arr, size, number, index - 1);
-                    displayArray(arr, size + 1);
+                    size+=1;
+                    displayArray(arr, size);
                     break;
                 case 7:
                     System.out.println("Nhập giá trị muốn xóa:");
